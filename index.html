@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CAFÉ CONTROL — Café de Especialidad</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            crema: '#FDFBF7',
+            'crema-suave': '#F5EFE6',
+            'crema-oscura': '#E8DFC8',
+            espresso: '#1C130E',
+            tinta: '#2B1B12',
+            cacao: '#4A3427',
+            ambar: '#D49B35',
+            'ambar-claro': '#F3C068',
+            borbon: '#A03E2B',
+            cafetal: '#3D5A45',
+            'cafetal-claro': '#5F8269',
+          },
+
+          fontFamily: {
+            serif: ['Fraunces', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+
+          boxShadow: {
+            artesanal:
+              '0 12px 36px -8px rgba(28, 19, 14, 0.12)',
+
+            dorado:
+              '0 8px 24px -4px rgba(212, 155, 53, 0.25)',
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .glass-panel {
+      background: rgba(253, 251, 247, 0.92);
+      backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+
+<body class="bg-crema text-tinta font-sans antialiased overflow-x-hidden">
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="sticky top-0 z-50 glass-panel border-b border-tinta/10">
+
+  <nav class="max-w-7xl mx-auto px-5 lg:px-12 h-20
+              flex items-center justify-between">
+
+    <!-- LOGO -->
+    <a href="index.html" class="flex items-center gap-3 group">
+
+      <div class="w-10 h-10 rounded-full bg-espresso
+                  flex items-center justify-center text-ambar
+                  group-hover:scale-105 transition-transform
+                  border border-ambar/30 shadow-md">
+
+        <svg class="w-6 h-6"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="1.8">
+
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+          <path d="M6 1v3"/>
+          <path d="M10 1v3"/>
+          <path d="M14 1v3"/>
+
+        </svg>
+      </div>
+
+      <div>
+        <span class="font-serif font-bold text-xl text-espresso block">
+          CAFÉ CONTROL
+        </span>
+
+        <span class="text-[10px] tracking-widest text-ambar
+                     uppercase font-semibold">
+          Finca de Especialidad
+        </span>
+      </div>
+
+    </a>
+
+
+    <!-- MENÚ -->
+    <div class="hidden md:flex items-center gap-7
+                font-medium text-sm text-cacao">
+
+      <a href="index.html"
+         class="text-borbon font-bold">
+        Inicio
+      </a>
+
+      <a href="perfil.html"
+         class="hover:text-borbon transition-colors">
+        Perfil Sensorial
+      </a>
+
+      <a href="trazabilidad.html"
+         class="hover:text-borbon transition-colors">
+        Trazabilidad
+      </a>
+
+      <a href="#contacto"
+         class="hover:text-borbon transition-colors">
+        Contacto
+      </a>
+
+    </div>
+
+
+    <!-- BOTÓN -->
+    <div class="hidden md:flex items-center gap-3">
+
+      <a href="perfil.html#ficha-tecnica"
+         class="px-4 py-2.5 rounded-full
+                border border-ambar/50
+                text-cacao font-semibold text-xs
+                uppercase tracking-wider
+                hover:bg-ambar hover:text-white
+                transition-all">
+
+        Ficha Técnica
+      </a>
+
+    </div>
+
+
+    <!-- MENÚ MÓVIL -->
+    <button onclick="toggleMobileMenu()"
+            class="md:hidden p-2 text-espresso">
+
+      <svg class="w-7 h-7"
+           fill="none"
+           stroke="currentColor"
+           viewBox="0 0 24 24">
+
+        <path stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+
+      </svg>
+
+    </button>
+
+  </nav>
+
+
+  <!-- MENÚ MÓVIL -->
+
+  <div id="mobile-menu"
+       class="hidden md:hidden bg-crema-suave
+              border-t border-tinta/10 px-6 py-4">
+
+    <div class="flex flex-col gap-3">
+
+      <a href="index.html"
+         class="py-2 font-bold text-borbon">
+        Inicio
+      </a>
+
+      <a href="perfil.html"
+         class="py-2">
+        Perfil Sensorial
+      </a>
+
+      <a href="trazabilidad.html"
+         class="py-2">
+        Trazabilidad
+      </a>
+
+      <a href="#contacto"
+         class="py-2">
+        Contacto
+      </a>
+
+      <a href="perfil.html#ficha-tecnica"
+         class="mt-2 py-3 bg-borbon
+                text-white text-center rounded-lg
+                font-semibold">
+        Ver Ficha Técnica Q-Grader
+      </a>
+
+    </div>
+  </div>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<main>
+
+<section class="relative py-14 lg:py-24 overflow-hidden">
+
+  <div class="absolute -left-20 top-20
+              w-80 h-80 bg-ambar/10
+              rounded-full blur-3xl">
+  </div>
+
+  <div class="absolute right-0 bottom-10
+              w-96 h-96 bg-borbon/10
+              rounded-full blur-3xl">
+  </div>
+
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-12
+              grid grid-cols-1 lg:grid-cols-12
+              gap-12 items-center">
+
+    <!-- TEXTO -->
+
+    <div class="lg:col-span-7 space-y-6">
+
+      <div class="inline-flex flex-wrap items-center gap-2
+                  px-4 py-2 rounded-full
+                  bg-crema-oscura/60
+                  border border-ambar/30
+                  text-cacao text-xs
+                  font-semibold uppercase">
+
+        <span class="w-2.5 h-2.5 rounded-full bg-cafetal"></span>
+
+        Proyecto Feria de Logros 2026
+
+        <span class="bg-borbon text-white
+                     px-2 py-1 rounded-full">
+          88.0–89.5 puntos
+        </span>
+
+      </div>
+
+
+      <h1 class="font-serif text-4xl sm:text-5xl
+                 lg:text-6xl font-extrabold
+                 text-espresso leading-tight">
+
+        El arte y la ciencia del
+
+        <span class="text-borbon italic">
+          café de especialidad.
+        </span>
+
+      </h1>
+
+
+      <p class="text-lg text-cacao/90
+                max-w-2xl leading-relaxed">
+
+        Café Control ofrece café de especialidad cultivado
+        en finca de altura y tostado cuidadosamente para
+        conservar su aroma, dulzura y sabor.
+
+      </p>
+
+
+      <div class="flex flex-wrap gap-4">
+
+        <a href="#producto"
+           class="px-7 py-4 bg-borbon
+                  hover:bg-espresso text-white
+                  font-semibold rounded-xl
+                  shadow-lg transition">
+
+          Ver café y precio
+        </a>
+
+        <a href="perfil.html"
+           class="px-7 py-4
+                  bg-crema-suave
+                  border border-tinta/15
+                  text-espresso font-semibold
+                  rounded-xl hover:bg-crema-oscura
+                  transition">
+
+          Hacer test de café
+        </a>
+
+      </div>
+
+
+      <!-- DATOS -->
+
+      <div class="pt-6 border-t border-tinta/10
+                  grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+        <div class="p-4 rounded-xl
+                    bg-crema-suave
+                    border border-tinta/5">
+
+          <div class="font-serif text-2xl font-bold text-borbon">
+            100%
+          </div>
+
+          <div class="text-xs text-cacao/80">
+            Café Arábica
+          </div>
+
+        </div>
+
+
+        <div class="p-4 rounded-xl
+                    bg-crema-suave
+                    border border-tinta/5">
+
+          <div class="font-serif text-2xl font-bold text-ambar">
+            1,200 m
+          </div>
+
+          <div class="text-xs text-cacao/80">
+            Altura de cultivo
+          </div>
+
+        </div>
+
+
+        <div class="p-4 rounded-xl
+                    bg-crema-suave
+                    border border-tinta/5">
+
+          <div class="font-serif text-2xl font-bold text-cafetal">
+            3ª
+          </div>
+
+          <div class="text-xs text-cacao/80">
+            Generación cafetalera
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- IMAGEN -->
+
+    <div class="lg:col-span-5">
+
+      <div class="rounded-3xl overflow-hidden
+                  shadow-artesanal border border-ambar/20">
+
+        <img
+          src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=80"
+          alt="Café de especialidad"
+          class="w-full h-[430px] object-cover">
+
+      </div>
+
+      <p class="text-xs text-cacao/60 mt-2 text-center">
+        Imagen ilustrativa. Reemplázala por una fotografía
+        real de tu finca o producto.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PRODUCTO Y PRECIO
+========================================================= -->
+
+<section id="producto"
+         class="py-16 bg-crema-suave">
+
+  <div class="max-w-6xl mx-auto px-6">
+
+    <div class="text-center mb-10">
+
+      <span class="text-xs font-bold uppercase
+                   tracking-widest text-ambar">
+        Nuestro café
+      </span>
+
+      <h2 class="font-serif text-3xl sm:text-4xl
+                 font-bold text-espresso mt-2">
+
+        Café Bourbon Cítrico
+
+      </h2>
+
+      <p class="text-cacao/75 mt-3">
+        Café recién tostado en presentación de 250 g.
+      </p>
+
+    </div>
+
+
+    <div class="grid md:grid-cols-2
+                gap-8 items-center">
+
+      <!-- FOTO -->
+
+      <div class="rounded-3xl overflow-hidden
+                  shadow-xl">
+
+        <img
+          src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1000&q=80"
+          alt="Granos de café tostado"
+          class="w-full h-[350px] object-cover">
+
+      </div>
+
+
+      <!-- PRODUCTO -->
+
+      <div class="bg-crema p-7 rounded-3xl
+                  border border-tinta/10 shadow-sm">
+
+        <div class="flex justify-between
+                    items-start gap-4">
+
+          <div>
+
+            <span class="text-xs font-bold
+                         text-cafetal uppercase">
+              Disponible
+            </span>
+
+            <h3 class="font-serif text-2xl
+                       font-bold text-espresso mt-2">
+
+              Bourbon Cítrico
+
+            </h3>
+
+          </div>
+
+
+          <div class="text-right">
+
+            <div class="font-serif text-3xl
+                        font-bold text-borbon">
+
+              $15.90
+
+            </div>
+
+            <div class="text-xs text-cacao/60">
+              250 g
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <p class="text-sm text-cacao/80
+                  leading-relaxed mt-5">
+
+          Tueste medio, con notas dulces,
+          cítricas y florales. Recomendado para
+          métodos filtrados y preparación en casa.
+
+        </p>
+
+
+        <div class="grid grid-cols-2 gap-3 mt-6">
+
+          <div class="p-3 bg-crema-suave rounded-xl">
+            <span class="text-xs text-cacao/60">
+              Tueste
+            </span>
+            <strong class="block text-sm">
+              Medio
+            </strong>
+          </div>
+
+          <div class="p-3 bg-crema-suave rounded-xl">
+            <span class="text-xs text-cacao/60">
+              Presentación
+            </span>
+            <strong class="block text-sm">
+              250 g
+            </strong>
+          </div>
+
+        </div>
+
+
+        <div class="mt-5 p-4
+                    bg-ambar/10
+                    rounded-xl">
+
+          <p class="text-xs text-cacao">
+
+            <strong>Envío:</strong>
+            disponible según zona.
+
+            <br>
+
+            <strong>Pago:</strong>
+            efectivo o transferencia.
+
+            <br>
+
+            <strong>Entrega:</strong>
+            se confirma al realizar el pedido.
+
+          </p>
+
+        </div>
+
+
+        <!-- BOTÓN WHATSAPP -->
+
+        <a
+          href="https://wa.me/50370000000?text=Hola%20CAF%C3%89%20CONTROL,%20quiero%20pedir%20el%20Bourbon%20C%C3%ADtrico%20de%20250%20g%20por%20$15.90."
+          target="_blank"
+          class="mt-6 w-full
+                 flex items-center justify-center
+                 gap-2 px-6 py-4
+                 bg-borbon hover:bg-espresso
+                 text-white font-bold
+                 rounded-xl transition">
+
+          Pedir mi café por WhatsApp
+
+        </a>
+
+
+        <p class="text-[11px] text-cacao/50
+                  text-center mt-3">
+
+          El pedido se abrirá directamente en WhatsApp
+          con el producto seleccionado.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     ¿CÓMO FUNCIONA?
+========================================================= -->
+
+<section class="py-16">
+
+  <div class="max-w-6xl mx-auto px-6">
+
+    <div class="text-center mb-10">
+
+      <span class="text-xs font-bold uppercase
+                   tracking-widest text-cafetal">
+
+        Compra fácil
+
+      </span>
+
+      <h2 class="font-serif text-3xl
+                 font-bold text-espresso mt-2">
+
+        ¿Cómo hacer tu pedido?
+
+      </h2>
+
+    </div>
+
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="p-6 rounded-2xl
+                  bg-crema-suave
+                  border border-tinta/10">
+
+        <div class="w-10 h-10 rounded-full
+                    bg-borbon text-white
+                    flex items-center justify-center
+                    font-bold">
+
+          1
+
+        </div>
+
+        <h3 class="font-bold mt-4">
+          Elige tu café
+        </h3>
+
+        <p class="text-sm text-cacao/70 mt-2">
+          Revisa el producto, presentación y precio.
+        </p>
+
+      </div>
+
+
+      <div class="p-6 rounded-2xl
+                  bg-crema-suave
+                  border border-tinta/10">
+
+        <div class="w-10 h-10 rounded-full
+                    bg-ambar text-espresso
+                    flex items-center justify-center
+                    font-bold">
+
+          2
+
+        </div>
+
+        <h3 class="font-bold mt-4">
+          Haz clic en pedir
+        </h3>
+
+        <p class="text-sm text-cacao/70 mt-2">
+          El botón abre WhatsApp con tu pedido preparado.
+        </p>
+
+      </div>
+
+
+      <div class="p-6 rounded-2xl
+                  bg-crema-suave
+                  border border-tinta/10">
+
+        <div class="w-10 h-10 rounded-full
+                    bg-cafetal text-white
+                    flex items-center justify-center
+                    font-bold">
+
+          3
+
+        </div>
+
+        <h3 class="font-bold mt-4">
+          Confirmamos tu pedido
+        </h3>
+
+        <p class="text-sm text-cacao/70 mt-2">
+          Te indicamos el método de pago, envío y entrega.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     EVIDENCIAS
+========================================================= -->
+
+<section class="py-16 bg-crema-suave">
+
+  <div class="max-w-6xl mx-auto px-6">
+
+    <div class="text-center mb-10">
+
+      <span class="text-xs font-bold uppercase
+                   tracking-widest text-borbon">
+
+        Conoce nuestro trabajo
+
+      </span>
+
+      <h2 class="font-serif text-3xl
+                 font-bold text-espresso mt-2">
+
+        Evidencias de nuestro café
+
+      </h2>
+
+      <p class="text-sm text-cacao/70 mt-3">
+        Aquí puedes mostrar fotografías reales de la finca,
+        el equipo y el proceso.
+      </p>
+
+    </div>
+
+
+    <div class="grid md:grid-cols-3 gap-5">
+
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=800&q=80"
+          alt="Finca de café"
+          class="w-full h-60 object-cover rounded-2xl">
+
+        <h3 class="font-bold mt-3">
+          Nuestra finca
+        </h3>
+
+        <p class="text-xs text-cacao/70">
+          Reemplazar con fotografía real.
+        </p>
+      </div>
+
+
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80"
+          alt="Proceso del café"
+          class="w-full h-60 object-cover rounded-2xl">
+
+        <h3 class="font-bold mt-3">
+          Nuestro proceso
+        </h3>
+
+        <p class="text-xs text-cacao/70">
+          Reemplazar con fotografía real.
+        </p>
+      </div>
+
+
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80"
+          alt="Equipo de café"
+          class="w-full h-60 object-cover rounded-2xl">
+
+        <h3 class="font-bold mt-3">
+          Nuestro equipo
+        </h3>
+
+        <p class="text-xs text-cacao/70">
+          Reemplazar con fotografía real.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="mt-8 p-5 bg-crema
+                border border-tinta/10
+                rounded-2xl">
+
+      <h3 class="font-bold text-espresso">
+        Certificados y pruebas
+      </h3>
+
+      <p class="text-sm text-cacao/70 mt-2">
+
+        Agrega aquí fotografías de certificados,
+        resultados de laboratorio, reconocimientos
+        o cualquier documento que compruebe las
+        características del café.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACTO
+========================================================= -->
+
+<section id="contacto"
+         class="py-16 bg-espresso text-crema">
+
+  <div class="max-w-6xl mx-auto px-6">
+
+    <div class="text-center mb-10">
+
+      <span class="text-xs font-bold uppercase
+                   tracking-widest text-ambar">
+
+        Estamos para ayudarte
+
+      </span>
+
+      <h2 class="font-serif text-3xl
+                 font-bold text-white mt-2">
+
+        Contacto
+
+      </h2>
+
+      <p class="text-crema/70 text-sm mt-3">
+        ¿Tienes alguna pregunta? Comunícate con nosotros.
+      </p>
+
+    </div>
+
+
+    <div class="grid sm:grid-cols-2
+                lg:grid-cols-4 gap-4">
+
+      <a
+        href="https://wa.me/50370000000"
+        target="_blank"
+        class="p-5 bg-white/5
+               rounded-2xl border border-white/10
+               hover:bg-white/10 transition">
+
+        <strong class="block text-ambar">
+          WhatsApp
+        </strong>
+
+        <span class="text-sm text-crema/70">
+          +503 7000-0000
+        </span>
+
+      </a>
+
+
+      <a
+        href="mailto:cafecontrol@example.com"
+        class="p-5 bg-white/5
+               rounded-2xl border border-white/10
+               hover:bg-white/10 transition">
+
+        <strong class="block text-ambar">
+          Correo
+        </strong>
+
+        <span class="text-sm text-crema/70">
+          cafecontrol@example.com
+        </span>
+
+      </a>
+
+
+      <div class="p-5 bg-white/5
+                  rounded-2xl border border-white/10">
+
+        <strong class="block text-ambar">
+          Ubicación
+        </strong>
+
+        <span class="text-sm text-crema/70">
+          El Salvador
+        </span>
+
+      </div>
+
+
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+        class="p-5 bg-white/5
+               rounded-2xl border border-white/10
+               hover:bg-white/10 transition">
+
+        <strong class="block text-ambar">
+          Instagram
+        </strong>
+
+        <span class="text-sm text-crema/70">
+          @cafecontrol
+        </span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="bg-espresso
+               border-t border-ambar/20
+               py-6 text-center">
+
+  <p class="text-xs text-crema/60">
+    © 2026 CAFÉ CONTROL — Café de especialidad.
+  </p>
+
+  <p class="text-xs text-crema/40 mt-1">
+    Cultivado con cuidado, tostado con precisión.
+  </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

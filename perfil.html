@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CAFÉ CONTROL — Perfil Sensorial</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+
+          colors: {
+            crema: '#FDFBF7',
+            'crema-suave': '#F5EFE6',
+            'crema-oscura': '#E8DFC8',
+            espresso: '#1C130E',
+            tinta: '#2B1B12',
+            cacao: '#4A3427',
+            ambar: '#D49B35',
+            borbon: '#A03E2B',
+            cafetal: '#3D5A45',
+          },
+
+          fontFamily: {
+            serif: ['Fraunces', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+
+        }
+      }
+    };
+  </script>
+
+</head>
+
+
+<body class="bg-crema text-tinta font-sans">
+
+
+<!-- HEADER -->
+
+<header class="sticky top-0 z-50
+               bg-crema/95 backdrop-blur-md
+               border-b border-tinta/10">
+
+  <nav class="max-w-7xl mx-auto px-6
+              h-20 flex items-center
+              justify-between">
+
+    <a href="index.html">
+
+      <span class="font-serif font-bold
+                   text-xl text-espresso">
+
+        CAFÉ CONTROL
+
+      </span>
+
+      <span class="block text-[10px]
+                   tracking-widest text-ambar
+                   uppercase">
+
+        Finca de Especialidad
+
+      </span>
+
+    </a>
+
+
+    <div class="hidden md:flex gap-7 text-sm">
+
+      <a href="index.html"
+         class="hover:text-borbon">
+        Inicio
+      </a>
+
+      <a href="perfil.html"
+         class="font-bold text-borbon">
+        Perfil Sensorial
+      </a>
+
+      <a href="trazabilidad.html"
+         class="hover:text-borbon">
+        Trazabilidad
+      </a>
+
+      <a href="index.html#contacto"
+         class="hover:text-borbon">
+        Contacto
+      </a>
+
+    </div>
+
+  </nav>
+
+</header>
+
+
+<!-- CONTENIDO -->
+
+<main class="max-w-6xl mx-auto px-6 py-16">
+
+
+  <div class="text-center max-w-3xl mx-auto">
+
+    <span class="text-xs font-bold
+                 uppercase tracking-widest
+                 text-ambar">
+
+      Perfil del café
+
+    </span>
+
+    <h1 class="font-serif text-4xl
+               font-bold text-espresso mt-3">
+
+      Bourbon Cítrico
+
+    </h1>
+
+    <p class="text-cacao/75 mt-4">
+
+      Un café equilibrado, dulce y aromático,
+      pensado para quienes disfrutan una taza
+      limpia y fácil de tomar.
+
+    </p>
+
+  </div>
+
+
+  <!-- INFORMACIÓN -->
+
+  <div class="grid md:grid-cols-2
+              gap-8 mt-12">
+
+
+    <div class="bg-crema-suave
+                rounded-3xl p-7
+                border border-tinta/10">
+
+      <h2 class="font-serif text-2xl
+                 font-bold text-espresso">
+
+        ¿A qué sabe?
+
+      </h2>
+
+      <div class="space-y-4 mt-6">
+
+        <div>
+          <span class="text-xs text-cacao/60">
+            Aroma
+          </span>
+
+          <p class="font-semibold">
+            Floral y dulce
+          </p>
+        </div>
+
+
+        <div>
+          <span class="text-xs text-cacao/60">
+            Sabor
+          </span>
+
+          <p class="font-semibold">
+            Cítrico, caramelo y frutas
+          </p>
+        </div>
+
+
+        <div>
+          <span class="text-xs text-cacao/60">
+            Acidez
+          </span>
+
+          <p class="font-semibold">
+            Brillante y agradable
+          </p>
+        </div>
+
+
+        <div>
+          <span class="text-xs text-cacao/60">
+            Cuerpo
+          </span>
+
+          <p class="font-semibold">
+            Medio
+          </p>
+        </div>
+
+
+        <div>
+          <span class="text-xs text-cacao/60">
+            Final
+          </span>
+
+          <p class="font-semibold">
+            Dulce y limpio
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="bg-espresso text-crema
+                rounded-3xl p-7">
+
+      <h2 class="font-serif text-2xl
+                 font-bold text-white">
+
+        Información del producto
+
+      </h2>
+
+
+      <div class="space-y-4 mt-6 text-sm">
+
+        <div class="flex justify-between
+                    border-b border-white/10 pb-3">
+
+          <span class="text-crema/60">
+            Variedad
+          </span>
+
+          <strong>
+            Bourbon
+          </strong>
+
+        </div>
+
+
+        <div class="flex justify-between
+                    border-b border-white/10 pb-3">
+
+          <span class="text-crema/60">
+            Tipo
+          </span>
+
+          <strong>
+            Arábica
+          </strong>
+
+        </div>
+
+
+        <div class="flex justify-between
+                    border-b border-white/10 pb-3">
+
+          <span class="text-crema/60">
+            Tueste
+          </span>
+
+          <strong>
+            Medio
+          </strong>
+
+        </div>
+
+
+        <div class="flex justify-between
+                    border-b border-white/10 pb-3">
+
+          <span class="text-crema/60">
+            Presentación
+          </span>
+
+          <strong>
+            250 g
+          </strong>
+
+        </div>
+
+
+        <div class="flex justify-between">
+
+          <span class="text-crema/60">
+            Precio
+          </span>
+
+          <strong class="text-ambar">
+            $15.90
+          </strong>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- TEST -->
+
+  <section class="mt-16">
+
+    <div class="text-center mb-8">
+
+      <h2 class="font-serif text-3xl
+                 font-bold text-espresso">
+
+        Encuentra tu café ideal
+
+      </h2>
+
+      <p class="text-sm text-cacao/70 mt-2">
+
+        Responde tres preguntas sencillas.
+
+      </p>
+
+    </div>
+
+
+    <div id="quiz"
+         class="bg-crema-suave
+                rounded-3xl p-6 md:p-10
+                border border-tinta/10">
+
+
+      <!-- PASO 1 -->
+
+      <div id="step-1">
+
+        <span class="text-xs font-bold
+                     text-ambar uppercase">
+          Paso 1 de 3
+        </span>
+
+        <h3 class="font-serif text-2xl
+                   font-bold mt-3">
+
+          ¿Cómo preparas tu café?
+
+        </h3>
+
+
+        <div class="grid md:grid-cols-3
+                    gap-4 mt-6">
+
+          <button onclick="nextStep(1,'espresso')"
+                  class="quiz-btn">
+
+            ☕
+            <strong>Espresso</strong>
+
+            <span>
+              Concentrado y con cuerpo.
+            </span>
+
+          </button>
+
+
+          <button onclick="nextStep(1,'filtro')"
+                  class="quiz-btn">
+
+            🧪
+            <strong>Filtro</strong>
+
+            <span>
+              Limpio y aromático.
+            </span>
+
+          </button>
+
+
+          <button onclick="nextStep(1,'prensa')"
+                  class="quiz-btn">
+
+            🫖
+            <strong>Prensa</strong>
+
+            <span>
+              Intenso y con textura.
+            </span>
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- PASO 2 -->
+
+      <div id="step-2" class="hidden">
+
+        <span class="text-xs font-bold
+                     text-ambar uppercase">
+          Paso 2 de 3
+        </span>
+
+        <h3 class="font-serif text-2xl
+                   font-bold mt-3">
+
+          ¿Qué sabor prefieres?
+
+        </h3>
+
+
+        <div class="grid md:grid-cols-3
+                    gap-4 mt-6">
+
+          <button onclick="nextStep(2,'frutal')"
+                  class="quiz-btn">
+
+            🍋
+            <strong>Frutal</strong>
+
+            <span>
+              Fresco y aromático.
+            </span>
+
+          </button>
+
+
+          <button onclick="nextStep(2,'balanceado')"
+                  class="quiz-btn">
+
+            🍫
+            <strong>Chocolate</strong>
+
+            <span>
+              Dulce y balanceado.
+            </span>
+
+          </button>
+
+
+          <button onclick="nextStep(2,'intenso')"
+                  class="quiz-btn">
+
+            🪵
+            <strong>Intenso</strong>
+
+            <span>
+              Fuerte y con cuerpo.
+            </span>
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- PASO 3 -->
+
+      <div id="step-3" class="hidden">
+
+        <span class="text-xs font-bold
+                     text-ambar uppercase">
+          Paso 3 de 3
+        </span>
+
+        <h3 class="font-serif text-2xl
+                   font-bold mt-3">
+
+          ¿Cuándo tomas café?
+
+        </h3>
+
+
+        <div class="grid md:grid-cols-3
+                    gap-4 mt-6">
+
+          <button onclick="showResult('mañana')"
+                  class="quiz-btn">
+
+            🌅
+            <strong>En la mañana</strong>
+
+            <span>
+              Para comenzar el día.
+            </span>
+
+          </button>
+
+
+          <button onclick="showResult('tarde')"
+                  class="quiz-btn">
+
+            ☀️
+            <strong>En la tarde</strong>
+
+            <span>
+              Para una pausa.
+            </span>
+
+          </button>
+
+
+          <button onclick="showResult('todo')"
+                  class="quiz-btn">
+
+            🔄
+            <strong>Todo el día</strong>
+
+            <span>
+              Para varias tazas.
+            </span>
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- RESULTADO -->
+
+      <div id="step-result"
+           class="hidden text-center">
+
+        <div class="text-4xl">
+          ☕
+        </div>
+
+        <span class="text-xs font-bold
+                     text-cafetal uppercase">
+
+          ¡Encontramos tu café ideal!
+
+        </span>
+
+        <h2 id="result-title"
+            class="font-serif text-3xl
+                   font-bold text-espresso mt-3">
+
+          Bourbon Cítrico
+
+        </h2>
+
+        <p id="result-desc"
+           class="text-sm text-cacao/75
+                  max-w-xl mx-auto mt-3">
+
+          Un café equilibrado, dulce y aromático.
+
+        </p>
+
+
+        <div class="max-w-md mx-auto
+                    bg-crema p-6
+                    rounded-2xl mt-6
+                    border border-tinta/10">
+
+          <div class="flex justify-between">
+            <span>Tueste</span>
+            <strong>Medio</strong>
+          </div>
+
+          <div class="flex justify-between mt-3">
+            <span>Presentación</span>
+            <strong>250 g</strong>
+          </div>
+
+          <div class="flex justify-between mt-3">
+            <span>Precio</span>
+            <strong class="text-borbon">
+              $15.90
+            </strong>
+          </div>
+
+        </div>
+
+
+        <div class="flex flex-col
+                    sm:flex-row
+                    justify-center gap-4 mt-6">
+
+          <a id="whatsapp-order"
+             href="#"
+             target="_blank"
+             class="px-7 py-3
+                    bg-borbon text-white
+                    rounded-full font-bold">
+
+            Pedir mi Blend Personalizado
+
+          </a>
+
+          <button onclick="resetQuiz()"
+                  class="px-7 py-3
+                         text-cacao underline">
+
+            Reiniciar test
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FICHA TÉCNICA -->
+
+  <section id="ficha-tecnica"
+           class="mt-16">
+
+    <div class="bg-espresso text-crema
+                rounded-3xl p-7 md:p-10">
+
+      <span class="text-xs font-bold
+                   uppercase tracking-widest
+                   text-ambar">
+
+        Ficha Técnica
+
+      </span>
+
+      <h2 class="font-serif text-3xl
+                 font-bold text-white mt-2">
+
+        Datos del café
+
+      </h2>
+
+
+      <div class="grid md:grid-cols-2
+                  gap-4 mt-7 text-sm">
+
+        <div class="p-4 bg-white/5 rounded-xl">
+          <span class="text-crema/60">
+            Variedad
+          </span>
+          <strong class="block mt-1">
+            Bourbon
+          </strong>
+        </div>
+
+        <div class="p-4 bg-white/5 rounded-xl">
+          <span class="text-crema/60">
+            Tipo
+          </span>
+          <strong class="block mt-1">
+            100% Arábica
+          </strong>
+        </div>
+
+        <div class="p-4 bg-white/5 rounded-xl">
+          <span class="text-crema/60">
+            Altura
+          </span>
+          <strong class="block mt-1">
+            1,200 m s. n. m.
+          </strong>
+        </div>
+
+        <div class="p-4 bg-white/5 rounded-xl">
+          <span class="text-crema/60">
+            Tueste
+          </span>
+          <strong class="block mt-1">
+            Medio
+          </strong>
+        </div>
+
+        <div class="p-4 bg-white/5 rounded-xl">
+          <span class="text-crema/60">
+            Presentación
+          </span>
+          <strong class="block mt-1">
+            250 g
+          </strong>
+        </div>
+
+        <div class="p-4 bg-white/5 rounded-xl">
+          <span class="text-crema/60">
+            Evaluación
+          </span>
+          <strong class="block mt-1">
+            88.0–89.5 puntos
+          </strong>
+        </div>
+
+      </div>
+
+
+      <p class="text-xs text-crema/50 mt-6">
+        Agrega aquí el certificado o documento real
+        que respalde la evaluación del café.
+      </p>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer class="bg-espresso border-t
+               border-ambar/20 py-6
+               text-center text-xs
+               text-crema/60">
+
+  © 2026 CAFÉ CONTROL — Café de especialidad.
+
+</footer>
+
+
+<style>
+
+.quiz-btn {
+  padding: 1.25rem;
+  border-radius: 1rem;
+  border: 2px solid rgba(43,27,18,.1);
+  background: #FDFBF7;
+  text-align: left;
+  transition: .25s;
+}
+
+.quiz-btn:hover {
+  border-color: #A03E2B;
+  transform: translateY(-2px);
+}
+
+.quiz-btn strong {
+  display: block;
+  margin-top: .5rem;
+}
+
+.quiz-btn span {
+  display: block;
+  font-size: .75rem;
+  color: rgba(74,52,39,.7);
+  margin-top: .25rem;
+}
+
+</style>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CAFÉ CONTROL — Trazabilidad</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+
+          colors: {
+            crema: '#FDFBF7',
+            'crema-suave': '#F5EFE6',
+            espresso: '#1C130E',
+            tinta: '#2B1B12',
+            cacao: '#4A3427',
+            ambar: '#D49B35',
+            borbon: '#A03E2B',
+            cafetal: '#3D5A45'
+          },
+
+          fontFamily: {
+            serif: ['Fraunces', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif']
+          }
+
+        }
+      }
+    };
+  </script>
+
+</head>
+
+
+<body class="bg-crema text-tinta font-sans">
+
+
+<header class="sticky top-0 z-50
+               bg-crema/95 backdrop-blur-md
+               border-b border-tinta/10">
+
+  <nav class="max-w-7xl mx-auto px-6
+              h-20 flex items-center
+              justify-between">
+
+    <a href="index.html">
+
+      <span class="font-serif font-bold
+                   text-xl text-espresso">
+
+        CAFÉ CONTROL
+
+      </span>
+
+      <span class="block text-[10px]
+                   tracking-widest text-ambar
+                   uppercase">
+
+        Finca de Especialidad
+
+      </span>
+
+    </a>
+
+
+    <div class="hidden md:flex gap-7 text-sm">
+
+      <a href="index.html"
+         class="hover:text-borbon">
+        Inicio
+      </a>
+
+      <a href="perfil.html"
+         class="hover:text-borbon">
+        Perfil Sensorial
+      </a>
+
+      <a href="trazabilidad.html"
+         class="font-bold text-borbon">
+        Trazabilidad
+      </a>
+
+      <a href="index.html#contacto"
+         class="hover:text-borbon">
+        Contacto
+      </a>
+
+    </div>
+
+  </nav>
+
+</header>
+
+
+<main class="max-w-6xl mx-auto px-6 py-16">
+
+
+  <!-- TITULO -->
+
+  <div class="text-center max-w-3xl mx-auto">
+
+    <span class="text-xs font-bold
+                 uppercase tracking-widest
+                 text-cafetal">
+
+      Nuestro proceso
+
+    </span>
+
+    <h1 class="font-serif text-4xl
+               font-bold text-espresso mt-3">
+
+      Del cafetal a la taza
+
+    </h1>
+
+    <p class="text-cacao/75 mt-4">
+
+      Explicamos de forma sencilla cómo cuidamos
+      el café durante las diferentes etapas del proceso.
+
+    </p>
+
+  </div>
+
+
+  <!-- PROCESO -->
+
+  <div class="grid md:grid-cols-2
+              gap-6 mt-12">
+
+
+    <div class="p-6 bg-crema-suave
+                rounded-2xl
+                border border-tinta/10">
+
+      <div class="text-3xl">
+        🌱
+      </div>
+
+      <h2 class="font-serif text-xl
+                 font-bold mt-4">
+
+        1. Cultivo
+
+      </h2>
+
+      <p class="text-sm text-cacao/75 mt-2">
+
+        El café se cultiva aproximadamente a
+        1,200 metros sobre el nivel del mar.
+        Trabajamos para mantener plantas saludables
+        y frutos de buena calidad.
+
+      </p>
+
+    </div>
+
+
+    <div class="p-6 bg-crema-suave
+                rounded-2xl
+                border border-tinta/10">
+
+      <div class="text-3xl">
+        🍒
+      </div>
+
+      <h2 class="font-serif text-xl
+                 font-bold mt-4">
+
+        2. Cosecha
+
+      </h2>
+
+      <p class="text-sm text-cacao/75 mt-2">
+
+        Seleccionamos los frutos que presentan
+        las mejores condiciones de madurez para
+        mantener un sabor uniforme.
+
+      </p>
+
+    </div>
+
+
+    <div class="p-6 bg-crema-suave
+                rounded-2xl
+                border border-tinta/10">
+
+      <div class="text-3xl">
+        ☀️
+      </div>
+
+      <h2 class="font-serif text-xl
+                 font-bold mt-4">
+
+        3. Secado
+
+      </h2>
+
+      <p class="text-sm text-cacao/75 mt-2">
+
+        El grano se seca de manera controlada
+        para reducir la humedad antes del almacenamiento.
+
+      </p>
+
+    </div>
+
+
+    <div class="p-6 bg-crema-suave
+                rounded-2xl
+                border border-tinta/10">
+
+      <div class="text-3xl">
+        🔥
+      </div>
+
+      <h2 class="font-serif text-xl
+                 font-bold mt-4">
+
+        4. Tueste
+
+      </h2>
+
+      <p class="text-sm text-cacao/75 mt-2">
+
+        Controlamos el tiempo y la temperatura
+        para obtener un tueste medio y resaltar
+        las características del café.
+
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- DATOS -->
+
+  <section class="mt-14">
+
+    <h2 class="font-serif text-3xl
+               font-bold text-espresso text-center">
+
+      Datos de nuestro proceso
+
+    </h2>
+
+
+    <div class="grid sm:grid-cols-2
+                lg:grid-cols-4 gap-4 mt-8">
+
+      <div class="p-5 rounded-2xl
+                  bg-espresso text-white">
+
+        <span class="text-xs text-crema/50">
+          Altura
+        </span>
+
+        <strong class="block text-2xl
+                       text-ambar mt-2">
+
+          1,200 m
+
+        </strong>
+
+        <span class="text-xs text-crema/60">
+          sobre el nivel del mar
+        </span>
+
+      </div>
+
+
+      <div class="p-5 rounded-2xl
+                  bg-espresso text-white">
+
+        <span class="text-xs text-crema/50">
+          Variedad
+        </span>
+
+        <strong class="block text-2xl
+                       text-ambar mt-2">
+
+          Bourbon
+
+        </strong>
+
+        <span class="text-xs text-crema/60">
+          Café Arábica
+        </span>
+
+      </div>
+
+
+      <div class="p-5 rounded-2xl
+                  bg-espresso text-white">
+
+        <span class="text-xs text-crema/50">
+          Tueste
+        </span>
+
+        <strong class="block text-2xl
+                       text-ambar mt-2">
+
+          Medio
+
+        </strong>
+
+        <span class="text-xs text-crema/60">
+          Tostado artesanal
+        </span>
+
+      </div>
+
+
+      <div class="p-5 rounded-2xl
+                  bg-espresso text-white">
+
+        <span class="text-xs text-crema/50">
+          Evaluación
+        </span>
+
+        <strong class="block text-2xl
+                       text-ambar mt-2">
+
+          88.0–89.5
+
+        </strong>
+
+        <span class="text-xs text-crema/60">
+          puntos
+        </span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- EVIDENCIAS -->
+
+  <section class="mt-16">
+
+    <div class="bg-crema-suave
+                rounded-3xl p-7
+                border border-tinta/10">
+
+      <span class="text-xs font-bold
+                   uppercase tracking-widest
+                   text-borbon">
+
+        Evidencias
+
+      </span>
+
+      <h2 class="font-serif text-3xl
+                 font-bold mt-2">
+
+        Demuestra lo que afirmas
+
+      </h2>
+
+      <p class="text-sm text-cacao/75 mt-3">
+
+        Para respaldar la información del proyecto,
+        agrega aquí fotografías reales, certificados,
+        resultados de análisis o documentos de la finca.
+
+      </p>
+
+
+      <div class="grid md:grid-cols-3 gap-5 mt-7">
+
+        <div class="bg-crema rounded-2xl p-5
+                    border border-tinta/10">
+
+          <div class="text-3xl">
+            📷
+          </div>
+
+          <h3 class="font-bold mt-3">
+            Fotos de la finca
+          </h3>
+
+          <p class="text-xs text-cacao/60 mt-1">
+            Agrega fotografías reales.
+          </p>
+
+        </div>
+
+
+        <div class="bg-crema rounded-2xl p-5
+                    border border-tinta/10">
+
+          <div class="text-3xl">
+            📄
+          </div>
+
+          <h3 class="font-bold mt-3">
+            Certificados
+          </h3>
+
+          <p class="text-xs text-cacao/60 mt-1">
+            Agrega documentos que respalden los datos.
+          </p>
+
+        </div>
+
+
+        <div class="bg-crema rounded-2xl p-5
+                    border border-tinta/10">
+
+          <div class="text-3xl">
+            👨‍🌾
+          </div>
+
+          <h3 class="font-bold mt-3">
+            Historia familiar
+          </h3>
+
+          <p class="text-xs text-cacao/60 mt-1">
+            Cuenta brevemente quién produce el café.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer class="bg-espresso
+               border-t border-ambar/20
+               py-6 text-center
+               text-xs text-crema/60">
+
+  © 2026 CAFÉ CONTROL — Café de especialidad.
+
+</footer>
+
+
+</body>
+</html>
